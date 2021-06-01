@@ -1,0 +1,16 @@
+<mat-nav-list>
+  <a mat-list-item (click)='onClose()' routerLink='/'>
+    <mat-icon>home_outlined</mat-icon>Home
+  </a>
+
+  <div mat-subheader>Account</div>
+  <a *ngIf='!login' mat-list-item (click)='onClose()' routerLink='/login'>
+    <mat-icon>login</mat-icon>Login
+  </a>
+  <a *ngIf='!login' mat-list-item (click)='onClose()' routerLink='/signup'>
+    <mat-icon>person_outlined</mat-icon>Sign Up
+  </a>
+  <a *ngIf='login' mat-list-item (click)='onLogout()'>
+    <mat-icon>logout</mat-icon>Logout
+  </a>
+</mat-nav-list>
